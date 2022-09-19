@@ -73,3 +73,7 @@ new_topic_results.shape
 ```python
 data['Topic'] = new_topic_results.argmax(axis=1)
 ```
+
+```python
+data.head()
+```
