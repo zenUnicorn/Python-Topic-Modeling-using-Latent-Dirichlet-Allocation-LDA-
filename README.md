@@ -38,3 +38,38 @@ v_matrix = vec.fit_transform(data['Text'].values.astype('U'))
 
 v_matrix
 ```
+
+```python
+LDA = LatentDirichletAllocation(n_components=5, random_state=45)
+LDA.fit(v_matrix)
+```
+
+```python
+topic_1 = LDA.components_[0]
+```
+
+```python
+top_topics = topic_1.argsort()[-10:]
+top_topics
+```
+
+```python
+for i in top_topics:
+    print(vec.get_feature_names()[i])
+```
+
+```python
+for a,topic in enumerate(LDA.components_):
+    print(f'Top 10 words for topic #{a}:')
+    print([vec.get_feature_names()[a] for a in topic.argsort()[-10:]])
+    print('\n')
+```
+
+```python
+new_topic_results = LDA.transform(v_matrix)
+new_topic_results.shape
+```
+
+```python
+data['Topic'] = new_topic_results.argmax(axis=1)
+```
