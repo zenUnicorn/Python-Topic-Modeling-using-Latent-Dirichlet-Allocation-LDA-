@@ -19,3 +19,22 @@ data.head()
 ```python
 data.shape
 ```
+
+```python
+data.isnull().sum()
+```
+
+```python
+data.dropna()
+```
+
+```python
+data['Text'][4]
+```
+
+```python
+vec = CountVectorizer(max_df=0.85, min_df=2, stop_words='english')
+v_matrix = vec.fit_transform(data['Text'].values.astype('U'))
+
+v_matrix
+```
