@@ -1,6 +1,7 @@
 # Python-Topic-Modeling-using-Latent-Dirichlet-Allocation-LDA
 Python Topic Modeling using Latent Dirichlet Allocation (LDA)
 
+### importing libraries
 ```python
 import random
 import pandas as pd
@@ -10,7 +11,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 ```
 The dataset we will use for the topic modeling is a very popular dataset on Kaggle. It contains 568,454 food reviews Amazon users left up to October 2012, we will divide the customer reviews into 5 groups using LDA.
-Download the dataset [here]([url](https://medium.com/r/?url=https%3A%2F%2Fwww.kaggle.com%2Fcode%2Fsdxingaijing%2Ftopic-model-lda-algorithm%2Fdata).
+Download the dataset [here](https://medium.com/r/?url=https%3A%2F%2Fwww.kaggle.com%2Fcode%2Fsdxingaijing%2Ftopic-model-lda-algorithm%2Fdata).
 
 ```python
 data = pd.read_csv('amazon-reviews.csv')
@@ -95,5 +96,6 @@ You should see (2500, 5), which indicates that there are 5 columns in each of th
 data.head()
 ```
 
- I will update this repo once I publish an article about this project
+ I will update this repo once I publish an article about this project.
+ 
  Happy coding!
