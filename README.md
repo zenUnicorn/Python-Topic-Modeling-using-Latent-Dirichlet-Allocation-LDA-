@@ -96,6 +96,6 @@ You should see (2500, 5), which indicates that there are 5 columns in each of th
 data.head()
 ```
 
- I will update this repo once I publish an article about this project.
+ I will update this repository once I publish an article about this project.
  
  Happy coding!
